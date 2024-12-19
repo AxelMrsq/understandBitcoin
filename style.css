@@ -1,0 +1,19 @@
+.container{
+    width: 100px;
+    height: 100px;
+    
+    position: absolute; /* Ajouté pour permettre le positionnement */
+    cursor: grab; /* Indique que l'utilisateur peut saisir l'élément */
+}
+
+#privateKey {
+    background-color: red;
+}
+
+#publicKey {
+    background-color: greenyellow;
+}
+
+#document {
+    background-color: beige;
+}
