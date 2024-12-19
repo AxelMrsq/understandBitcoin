@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lock = false;
     let privateLock = false;
     let publicLock = false;
+    const documentContainer = document.getElementById("document");
 
     const initialPositions = {}; // Stocker les positions initiales des conteneurs
 
@@ -44,11 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (container !== activeContainer && isColliding(activeContainer, container)) {
                     // Action si collision détectée
                     if (activeContainer.id === 'privateKey' && container.id === 'document' && lock == false && publicLock == false && privateLock == false) {
-                        container.style.backgroundColor = 'red'; // Change la couleur en rouge
+                        container.style.backgroundColor = '#e06666'; // Change la couleur en rouge
                         lock = true;
                         privateLock = true;
                         console.log("private key locking");
                         resetPosition(activeContainer);
+                        documentContainer.innerText = "ciphered with the private key";
                     }
                     else if (activeContainer.id === 'publicKey' && container.id === 'document' && lock == true && publicLock == false && privateLock == true ) {
                         container.style.backgroundColor = 'beige'; 
@@ -56,13 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         privateLock = false; 
                         console.log("public key unlocking");
                         resetPosition(activeContainer);
+                        documentContainer.innerText = "deciphered";
                     }
                     else if (activeContainer.id === 'publicKey' && container.id === 'document' && lock == false && publicLock == false && privateLock == false ) {
-                        container.style.backgroundColor = 'greenyellow'; // Change la couleur en rouge
+                        container.style.backgroundColor = '#93c47c'; // Change la couleur en rouge
                         lock = true;
                         publicLock = true;
                         console.log("public key locking");
                         resetPosition(activeContainer);
+                        documentContainer.innerText = "ciphered with the public key";
                     }
                     else if (activeContainer.id === 'privateKey' && container.id === 'document' && lock == true && publicLock == true && privateLock == false) {
                         container.style.backgroundColor = 'beige'; // Change la couleur en rouge
@@ -70,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         publicLock = false;
                         console.log("private key unlocking");
                         resetPosition(activeContainer);
+                        documentContainer.innerText = "deciphered";
                     }
                 } 
             });

@@ -1,19 +1,10 @@
-.container{
-    width: 100px;
-    height: 100px;
-    
-    position: absolute; /* Ajouté pour permettre le positionnement */
-    cursor: grab; /* Indique que l'utilisateur peut saisir l'élément */
+html {
+    background: rgb(61,133,198);
+    background: linear-gradient(63deg, rgba(61,133,198,1) 35%, rgba(177,218,255,1) 100%);
 }
-
-#privateKey {
-    background-color: red;
-}
-
-#publicKey {
-    background-color: greenyellow;
-}
-
-#document {
-    background-color: beige;
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,0 +1,29 @@
+html {
+    background-color: #eeeeee;
+}
+a {
+    text-decoration: none;
+    color: #194187;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100px;
+    height: 100px;
+    
+    position: absolute; /* Ajouté pour permettre le positionnement */
+    cursor: grab; /* Indique que l'utilisateur peut saisir l'élément */
+}
+
+#privateKey {
+    background-color: #e06666;
+}
+
+#publicKey {
+    background-color: #93c47c;
+}
+
+#document {
+    background-color: beige;
+}
