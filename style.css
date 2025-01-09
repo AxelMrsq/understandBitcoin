@@ -8,3 +8,48 @@ a {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Style général pour le conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style pour le bouton */
+.dropdown-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style du menu déroulant caché au départ */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style des liens du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Changements de couleur au survol des éléments du menu */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Afficher le menu déroulant lorsque le bouton est cliqué */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,6 +1,64 @@
 html {
     background-color: #eeeeee;
+    overflow: hidden;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
 }
+
+body{
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+/* Conteneur principal */
+.container_bonus {
+    position: relative;
+    display: inline-block;
+}
+
+/* Cercle avec le point d'interrogation */
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/* Rectangle avec le texte */
+.tooltip {
+    visibility: hidden; /* Au départ, le texte est caché */
+    width: 200px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 40px; /* Positionne le rectangle au-dessus du cercle */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Affichage du texte au survol du cercle */
+.container_bonus:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 a {
     text-decoration: none;
     color: #194187;
@@ -8,22 +66,66 @@ a {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Style général pour le conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style pour le bouton */
+.dropdown-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style du menu déroulant caché au départ */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style des liens du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Changements de couleur au survol des éléments du menu */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Afficher le menu déroulant lorsque le bouton est cliqué */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 .container{
     width: 100px;
     height: 100px;
-    
+    color: #6fa8dc;
+    text-align: center;
     position: absolute; /* Ajouté pour permettre le positionnement */
     cursor: grab; /* Indique que l'utilisateur peut saisir l'élément */
 }
 
-#privateKey {
-    background-color: #e06666;
+
+img {
+    width: 100px;
+    height: 100px;
 }
 
-#publicKey {
-    background-color: #93c47c;
-}
 
-#document {
-    background-color: beige;
-}
+

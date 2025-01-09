@@ -45,36 +45,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (container !== activeContainer && isColliding(activeContainer, container)) {
                     // Action si collision détectée
                     if (activeContainer.id === 'privateKey' && container.id === 'document' && lock == false && publicLock == false && privateLock == false) {
-                        container.style.backgroundColor = '#e06666'; // Change la couleur en rouge
+                        document.getElementById('documentImage').src = 'media/cipheredDocument.png';
                         lock = true;
                         privateLock = true;
                         console.log("private key locking");
                         resetPosition(activeContainer);
-                        documentContainer.innerText = "ciphered with the private key";
+                        document.querySelector('#document h3').innerText = "Ciphered with the private key";
                     }
                     else if (activeContainer.id === 'publicKey' && container.id === 'document' && lock == true && publicLock == false && privateLock == true ) {
-                        container.style.backgroundColor = 'beige'; 
+                        document.getElementById('documentImage').src = 'media/document.png';
                         lock = false;
                         privateLock = false; 
                         console.log("public key unlocking");
                         resetPosition(activeContainer);
-                        documentContainer.innerText = "deciphered";
+                        document.querySelector('#document h3').innerText = "document";
                     }
                     else if (activeContainer.id === 'publicKey' && container.id === 'document' && lock == false && publicLock == false && privateLock == false ) {
-                        container.style.backgroundColor = '#93c47c'; // Change la couleur en rouge
+                        document.getElementById('documentImage').src = 'media/cipheredDocument.png';
                         lock = true;
                         publicLock = true;
                         console.log("public key locking");
                         resetPosition(activeContainer);
-                        documentContainer.innerText = "ciphered with the public key";
+                        document.querySelector('#document h3').innerText = "Ciphered with the public key";
                     }
                     else if (activeContainer.id === 'privateKey' && container.id === 'document' && lock == true && publicLock == true && privateLock == false) {
-                        container.style.backgroundColor = 'beige'; // Change la couleur en rouge
+                        document.getElementById('documentImage').src = 'media/document.png';
                         lock = false;
                         publicLock = false;
                         console.log("private key unlocking");
                         resetPosition(activeContainer);
-                        documentContainer.innerText = "deciphered";
+                        document.querySelector('#document h3').innerText = "document";
                     }
                 } 
             });

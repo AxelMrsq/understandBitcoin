@@ -4,15 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <header>
-    <a href="../index.html"> Menu </a>
+    <div class="dropdown">
+        <button class="dropdown-button">Menu</button>
+        <div class="dropdown-content">
+            <a href="../index.html"> Home </a>
+            <a href="asymmetricEncryption\index.html"> Asymmetric Encryption </a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+        </div>
+    </div>
+    <div class="container_bonus">
+        <!-- Cercle avec un point d'interrogation -->
+        <div class="circle">
+            ?
+        </div>
+
+        <!-- Rectangle contenant le texte -->
+        <div class="tooltip">
+            <p>Anything encrypted with one key can only be decrypted with the other key of the pair.</p>
+        </div>
+    </div>
 </header>
 <body>
-    <div id="publicKey" class="container"> Public key </div>
-    <div id="privateKey" class="container"> Private key </div>
-    <div id="document" class="container"> Document </div>
+    <div id="publicKey" class="container">
+        <h3> Public key </h3>
+        <img src="media/publicKey.png" alt="png"> 
+    </div>
+
+    <div id="privateKey" class="container"> 
+        <h3> Private key </h3>
+        <img src="media/privateKey.png" alt="png">
+    </div>
+
+    <div id="document" class="container"> 
+        <h3> Document </h3>
+        <img id="documentImage" src="media/document.png" alt="png">
+    </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
