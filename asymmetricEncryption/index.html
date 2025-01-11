@@ -24,25 +24,31 @@
 
         <!-- Rectangle contenant le texte -->
         <div class="tooltip">
+            <p>Each individual has a public and a private key. </p>
+            <p>Only he has access to his private key.</p>
+            <p>It's private !</p>
+            <p>But everyone has access to his public key.</p>
+            <p>It's public !</p>
             <p>Anything encrypted with one key can only be decrypted with the other key of the pair.</p>
+            <p>Try to move one key on the document to cipher it and next deciper it !</p>
         </div>
     </div>
 </header>
 <body>
-    <div id="publicKey" class="container">
-        <h3> Public key </h3>
-        <img src="media/publicKey.png" alt="png"> 
-    </div>
+        <div id="publicKey" class="container">
+            <h3> Public key </h3>
+            <img src="media/publicKey.png" alt="png"> 
+        </div>
 
-    <div id="privateKey" class="container"> 
-        <h3> Private key </h3>
-        <img src="media/privateKey.png" alt="png">
-    </div>
+        <div id="privateKey" class="container"> 
+            <h3> Private key </h3>
+            <img src="media/privateKey.png" alt="png">
+        </div>
 
-    <div id="document" class="container"> 
-        <h3> Document </h3>
-        <img id="documentImage" src="media/document.png" alt="png">
-    </div>
+        <div id="document" class="container"> 
+            <h3> Document </h3>
+            <img id="documentImage" src="media/document.png" alt="png">
+        </div>
     <script src="script.js" defer></script>
 </body>
 </html>
